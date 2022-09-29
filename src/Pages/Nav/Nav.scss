@@ -1,0 +1,158 @@
+@import "../../App";
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+  background-color: #181717;
+
+  .container {
+    width: 80%;
+    margin: 0 auto;
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 8.9vh;
+
+      .logo_phone {
+        align-items: center;
+        display: flex;
+
+        .phoneNumber {
+          a {
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 500;
+            color: #c7d0d1;
+            cursor: pointer;
+
+            &:hover {
+              color: #fff;
+              border-bottom: 2px solid #ffffff;
+            }
+
+            @media (max-width: 900px) {
+              font-size: 16px;
+            }
+
+            @media (max-width: 360px) {
+              display: none;
+            }
+          }
+
+          .call_icon {
+            display: none;
+
+            @media(max-width: 360px) {
+              display: flex;
+            }
+          }
+        }
+
+        .logo {
+          margin-left: -25px;
+          display: flex;
+          align-items: center;
+        }
+      }
+
+      .header_icons {
+        align-items: center;
+        display: flex;
+        gap: 15px;
+        justify-content: flex-end;
+
+        .login_component {
+          display: flex;
+          flex-direction: row;
+
+          .login_btn {
+            margin-right: 10px
+          }
+        }
+
+        .login_btn {
+          @include btn();
+
+          @media (max-width: 900px) {
+            @media (max-width: 900px) {
+              display: none;
+            }
+          }
+        }
+
+        .signup_btn {
+          @include btn_opposite();
+
+          @media (max-width: 900px) {
+            display: none;
+          }
+        }
+
+        .login_icon {
+          background: none;
+          border: none;
+          display: none;
+
+          @media(max-width: 900px) {
+            display: flex;
+          }
+        }
+
+        .language {
+          select {
+            background: none;
+            border: none;
+            color: white;
+            padding: 5px;
+            outline: none;
+            cursor: pointer;
+
+            &:hover {
+              color: #c7d0d1;
+            }
+
+            option {
+              background-color: #393838;
+              padding: 10px;
+              border: none;
+              color: #fff;
+            }
+          }
+        }
+
+        .cart {
+          width: 30px;
+          display: flex;
+          justify-content: center;
+          position: relative;
+
+          .span {
+            color: white;
+            position: absolute;
+            background: #e5001bc6;
+            border-radius: 50%;
+            padding: 1px 6px;
+            font-size: 12px;
+            right: -7px;
+            top: -5px;
+          }
+
+          .none {
+            display: none;
+          }
+        }
+
+        @media (max-width: 500px) {
+          gap: 0;
+        }
+      }
+    }
+
+    @media(max-width: 900px) {
+      width: 90%;
+    }
+  }
+}

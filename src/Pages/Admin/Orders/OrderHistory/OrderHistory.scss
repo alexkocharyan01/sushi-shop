@@ -1,0 +1,148 @@
+@import "../../../../App";
+
+.admin_order_history_page {
+  background-color: #1d1c1cf8;
+  min-height: 100vh;
+  width: 100%;
+
+  .order_history_contaienr {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 70px;
+
+    .order_map {
+      margin-top: 40px;
+      background-color: rgba(206, 206, 206, 0.301);
+      border-radius: 20px 20px 0 0;
+
+      .orderInfo {
+        .cart_item {
+          background-color: #e2e2e2;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          border-bottom: 1px solid #3c414c40;
+          padding: 5px 20px;
+
+          &:first-child {
+            border-radius: 20px 20px 0 0;
+
+          }
+
+          img {
+            width: 120px;
+            height: 75px;
+          }
+
+          p {
+            color: black;
+            font-weight: bold;
+
+            span {
+              color: black;
+              font-weight: normal;
+            }
+          }
+
+          .delete_item {
+            color: rgb(83, 28, 28);
+            font-weight: bold;
+            padding-left: 10px;
+            font-size: 18px;
+          }
+
+          @media(max-width: 1000px) {
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            padding: 5px 7px;
+          }
+        }
+      }
+
+      .orderInfo_second_part {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 20px;
+
+        .userInfo {
+          h2 {
+            padding-bottom: 6px;
+            color: rgba(255, 255, 255, 0.904);
+
+            @media(max-width: 700px) {
+              font-size: 20px;
+            }
+
+            @media(max-width: 350px) {
+              font-size: 18px;
+            }
+          }
+
+          p {
+            color: rgba(255, 246, 246, 0.911);
+            font-weight: bold;
+
+            @media(max-width: 700px) {
+              font-size: 14px;
+            }
+
+            span {
+              padding-left: 10px;
+              font-weight: normal;
+              color: white;
+              font-size: 18px;
+
+              @media(max-width: 700px) {
+                font-size: 16px;
+              }
+            }
+          }
+        }
+
+        .orders_take {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+
+          p {
+            color: rgba(255, 246, 246, 0.911);
+            font-weight: bold;
+            padding-bottom: 10px;
+            text-align: center;
+            font-size: 18px;
+
+            @media(max-width: 700px) {
+              font-size: 16px;
+            }
+
+            span {
+              padding-left: 10px;
+              font-weight: normal;
+              color: white;
+              font-size: 20px;
+
+              @media(max-width: 700px) {
+                font-size: 18px;
+              }
+            }
+          }
+        }
+
+        @media(max-width: 600px) {
+          gap: 18px;
+          align-items: center;
+          flex-direction: column;
+        }
+      }
+    }
+
+    @media(max-width: 1400px) {
+      width: 90%;
+    }
+
+    @media(max-width: 1200px) {
+      padding-top: 30px;
+    }
+  }
+}

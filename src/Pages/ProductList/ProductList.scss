@@ -1,0 +1,240 @@
+@import "../../App";
+
+.user_product_list_container {
+  width: 19%;
+  background-color: #3C414D;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  padding: 2.6vh 1.3vw;
+  z-index: 99;
+
+  .user_product_list {
+    display: flex;
+    justify-content: center;
+    height: 16.07vh;
+    width: 100%;
+
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .product_info {
+    display: flex;
+    flex-direction: column;
+
+    .name {
+      text-align: start;
+      font-size: 18px;
+      color: white;
+      font-weight: 500;
+      text-transform: capitalize;
+      padding: 1.06vh 0 0.4vh;
+    }
+
+    .details_price {
+      display: flex;
+
+      button {
+        background: none;
+        border: none;
+        font-size: 16px;
+        color: white;
+        opacity: .7;
+        cursor: pointer;
+
+        &:hover {
+          opacity: 1;
+          border-bottom: 1px solid #fff;
+        }
+      }
+
+      .price {
+        color: white;
+        padding-left: 40px;
+      }
+    }
+
+  }
+
+  .add_cart {
+    padding-top: 1.7vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+
+  .add_basket {
+    @include btn();
+    height: 3.84vh;
+
+    p {
+      font-size: 14px;
+      padding-left: 10px;
+    }
+
+  }
+
+  .add_reduce {
+    @include btn_opposite();
+    height: 3.84vh;
+    padding: 0 10px;
+
+    button {
+      background: none;
+      border: none;
+      color: white;
+      padding: 0 7px;
+      cursor: pointer;
+    }
+
+    .count_prod {
+      padding: 0 10px;
+    }
+  }
+
+  @media (max-width: 1785px) {
+    width: 18%;
+  }
+
+  @media (max-width: 1607px) {
+    width: 17%;
+  }
+  @media (max-width: 1406px) {
+    width: 25%;
+  }
+  @media (max-width: 1299px) {
+    width: 24%;
+  }
+  @media (max-width: 1160px) {
+    width: 22%;
+  }
+  @media (max-width: 1000px) {
+    width: 37%;
+  }
+  @media (max-width: 769px) {
+    width: 32%;
+  }
+  @media (max-width: 600px) {
+    width: 70%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+.dialog_details {
+
+  .makeStyles-dialog-1 {
+    background-color: #3C414D !important;
+    height: 90vh !important;
+    display: flex;
+    justify-content: center;
+
+    button {
+      background: none;
+      border: none;
+      float: right;
+      display: flex;
+      svg{
+        fill: white;
+        &:hover{
+          fill: #afb3bb;
+        }
+      }
+    }
+
+    .dialog_user_product_list_container {
+      
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 0 auto;
+
+      .dialog_user_product_list {
+        display: flex;
+        justify-content: center;
+        height: 220px;
+        width: 100%;
+
+        img {
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .details_product {
+        
+        width: 60%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 20px 0;
+        text-align: center;
+
+        .pr_name {
+          font-size: 20px;
+          font-weight: bold;
+          color: white;
+        }
+
+        .pr_description {
+          color: rgba(255, 255, 255, 0.781);
+        }
+
+        .pr_price {
+          font-size: 20px;
+          color: white;
+        }
+      }
+
+      .dialog_add_cart {
+        width: 60%;
+        margin: 0 auto;
+        padding-top: 16px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @media (max-width: 550px) {
+          flex-direction: column-reverse;
+        }
+      }
+
+      .dialog_add_basket {
+        @include btn();
+
+        p {
+          font-size: 14px;
+          padding-left: 10px;
+        }
+
+      }
+
+      .add_reduce {
+        @include btn_opposite();
+        height: 32px;
+        padding: 0 10px;
+
+        button {
+          background: none;
+          border: none;
+          color: white;
+          padding: 0 7px;
+          cursor: pointer;
+        }
+
+        .count_prod {
+          padding: 0 10px;
+        }
+
+        @media (max-width: 550px) {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+}

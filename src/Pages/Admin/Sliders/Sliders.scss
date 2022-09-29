@@ -1,0 +1,45 @@
+@import "../../../App";
+
+.slider_page {
+  background-color: #181717;
+  min-height: 100vh;
+
+  .modal_btn {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 30px;
+
+    button {
+      @include btn_opposite();
+
+      &:hover {
+        border: none;
+      }
+    }
+  }
+
+  .sliders_container {
+    width: 70%;
+    margin: 30px auto;
+
+    .MuiTableHead-root {
+      .MuiTableCell-root {
+        font-weight: 600;
+      }
+
+      .MuiTableCell-root {
+        text-align: center;
+      }
+
+    }
+
+    .css-1ex1afd-MuiTableCell-root {
+      text-align: center !important;
+    }
+
+    @media(max-width: 1400px) {
+      width: 90%;
+    }
+  }
+
+}

@@ -1,0 +1,77 @@
+@import "../../App";
+
+.login {
+  background: rgba(24, 23, 23, 0.86);
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .box {
+    width: 100%;
+    padding: 50px 40px;
+    background: rgb(255, 255, 255);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .2);
+    border-radius: 10px;
+
+    h2 {
+      margin: 0 0 30px;
+      padding: 0;
+      color: #262525b3;
+      font-size: 30px;
+      text-align: center;
+
+      &:hover {
+        font-weight: bold;
+      }
+    }
+
+    .inputBox {
+      position: relative;
+
+      input {
+        width: 100%;
+        padding: 10px 0;
+        font-size: 16px;
+        color: rgb(8, 8, 8);
+        letter-spacing: 1px;
+        margin-bottom: 30px;
+        border: none;
+        border-bottom: 1px solid #908c8a5a;
+        outline: none;
+        background: transparent;
+        cursor: pointer;
+
+        &::placeholder {
+          opacity: .5;
+        }
+      }
+    }
+
+    .button {
+
+      @include btn();
+      margin: 0 auto;
+
+      &:hover {
+        color: black;
+      }
+    }
+
+    .forgotpass {
+      text-align: end;
+      margin-top: 30px;
+      font-size: 14px;
+
+      span {
+        cursor: pointer;
+
+        &:hover {
+          border-bottom: 2px solid #1212128c;
+        }
+      }
+    }
+  }
+}

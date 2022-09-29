@@ -1,0 +1,230 @@
+@import "../../App";
+
+.main_block {
+  width: 100%;
+  height: 100vh;
+  background: rgba(24, 23, 23, 0.86);;
+
+  .main_container {
+    width: 80%;
+    margin: 12.2vh auto 0;
+
+    .main_block_nav {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+
+      .portfolio__labels {
+        z-index: 999;
+        display: flex;
+        justify-content: space-between;
+        color: rgba(251, 251, 251, 0.645);
+        font-size: 2.5vh;
+        font-weight: 400;
+
+        .active_label {
+          border-bottom: 2px solid white;
+          color: white;
+        }
+
+        span {
+          margin-right: 20px;
+          cursor: pointer;
+
+          @media (max-width: 500px) {
+            margin-bottom: 10px;
+          }
+        }
+
+        @media (max-width: 1120px) {
+          font-size: 18px;
+        }
+
+        @media (max-width: 550px) {
+          font-size: 16px;
+        }
+        @media (max-width: 500px) {
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+      }
+
+      .search {
+        display: flex;
+        align-items: center;
+        width: 300px;
+        border: 1px solid #fffdfda5;
+        border-radius: 20px;
+        z-index: 99;
+
+        input {
+          background: none;
+          border: none;
+          color: white;
+
+          &:focus-visible {
+            color: white;
+            width: 81%;
+            outline: none;
+          }
+        }
+
+        .search_icon {
+          padding: 0 10px;
+        }
+
+        @media (max-width: 1000px) {
+          width: 100%;
+          padding: 5px 0;
+          margin-bottom: 15px;
+        }
+        @media (max-width: 1120px) {
+          display: none;
+        }
+      }
+
+      @media (max-width: 1000px) {
+        flex-direction: column-reverse;
+      }
+    }
+
+    .product_list {
+      transition: 5s;
+      gap: 4.2vh;
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 3.2vh;
+      justify-content: center;
+
+      @media (max-width: 600px) {
+        justify-content: center;
+        gap: 3vh;
+      }
+    }
+  }
+
+}
+
+.MuiPagination-root {
+  z-index: 1000;
+
+  .MuiPagination-ul {
+    flex-wrap: nowrap;
+
+    li {
+      display: none;
+
+      &:first-child {
+        position: absolute;
+        left: 50px;
+        top: 55%;
+        flex-basis: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        border: none;
+        background: none;
+        z-index: 99999;
+
+        > button::after {
+          margin-left: 10px;
+        }
+
+        button {
+          background: none;
+          border: none;
+
+          svg {
+            color: white;
+            font-size: 70px;
+          }
+        }
+
+        @media (max-width: 1300px) {
+          left: 40px;
+        }
+        @media (max-width: 1100px) {
+          left: 5px;
+        }
+        @media (max-width: 700px) {
+          left: -10px;
+        }
+      }
+
+      &:last-child {
+        border: none;
+        background: none;
+        position: absolute;
+        right: 50px;
+        top: 55%;
+        flex-basis: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        z-index: 99999;
+
+        > button::before {
+          margin-right: 10px;
+        }
+
+        button {
+          border: none;
+          background: none;
+
+          svg {
+            color: white;
+            font-size: 70px;
+          }
+        }
+
+        @media (max-width: 1300px) {
+          right: 40px;
+        }
+        @media (max-width: 1100px) {
+          right: 5px;
+        }
+        @media (max-width: 700px) {
+          right: -10px;
+        }
+      }
+    }
+  }
+}
+
+.top_left {
+  position: absolute;
+  top: 0;
+
+  @media (max-width: 1000px) {
+    display: none;
+  }
+}
+
+.top_right {
+  position: absolute;
+  top: -119px;
+  right: -5%;
+
+  @media (max-width: 1000px) {
+    display: none;
+  }
+}
+
+.bot_left {
+  position: absolute;
+  bottom: -20%;
+
+  @media (max-width: 1000px) {
+    display: none;
+  }
+}
+
+.bot_right {
+  position: absolute;
+  bottom: -4%;
+  right: 0;
+
+  @media (max-width: 1000px) {
+    display: none;
+  }
+}
